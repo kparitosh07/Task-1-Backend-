@@ -1,63 +1,83 @@
-🎟️ Event Ticketing Platform API
-================================
+# 🎟️ Event Ticketing Platform API
 
-A RESTful API for an **Event Ticketing Platform** built using **Node.js** and **Express.js**.
+A RESTful **API** for an **Event Ticketing Platform** built using **Node.js** and **Express.js**.
 
-🛠️ Tech Stack
---------------
+## 🛠️ Tech Stack
 
-*   Node.js
-    
-*   Express.js
-    
-*   JavaScript
-    
-*   Postman
-    
+- Node.js
+- Express.js
+- JavaScript
+- Postman
 
-⚙️ Setup
---------
+## ⚙️ Setup
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm install  node server.js   `
+```bash npm install node server.js ```
 
 Server runs at:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   http://localhost:3000   `
+```text [http://localhost:**3000**](http://localhost:**3000**) ```
 
-📌 API Endpoints
-----------------
+## 📌 API Endpoints
 
-### 1\. Check API
+### 1. Check API
 
-**GET** /
+**GET** `/`
 
-**Status:** 200 OK
+**Status:** `**200** OK`
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   {    "title": "Event Ticket platform",    "message": "Use postman to test the API"  }   `
+```json
+{
+    *title*: *Event Ticket platform*,
+    *message*: *Use postman to test the **API***
+}
+```
 
-### 2\. Create Event
+### 2. Create Event
 
-**POST** /events
+**POST** `/events`
 
-**Status:** 201 Created
+**Status:** `**201** Created`
 
 **Body:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   {    "title": "Tech Fest 2026",    "venue": "College Auditorium",    "date": "2026-10-15",    "noOfTickets": 500,    "price": 299  }   `
+```json
+{
+    *title*: *Tech Fest **2026***,
+    *venue*: *College Auditorium*,
+    *date*: ***2026**-10-15*,
+    *noOfTickets*: **500**,
+    *price*: **299**
+}
+```
 
 **Response:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   {    "id": 1,    "title": "Tech Fest 2026",    "venue": "College Auditorium",    "date": "2026-10-15",    "noOfTickets": 500,    "price": 299  }   `
+```json
+{
+    *id*: 1,
+    *title*: *Tech Fest **2026***,
+    *venue*: *College Auditorium*,
+    *date*: ***2026**-10-15*,
+    *noOfTickets*: **500**,
+    *price*: **299**
+}
+```
 
-### 3\. Get All Events
+### 3. Get All Events
 
-**GET** /events
+**GET** `/events`
 
-**Status:** 200 OK
+**Status:** `**200** OK`
 
 Returns all currently created events.
 
-📊 Progress
------------
+## 📊 Progress
 
-MethodEndpointStatusGET/✅ DonePOST/events✅ DoneGET/events✅ DoneGET/events/:id⏳ PendingPUT/events/:id⏳ PendingDELETE/events/:id⏳ Pending
+| Method | Endpoint      | Status    |
+| ------ | ------------- | --------- |
+| GET    | `/`           | ✅ Done    |
+| POST   | `/events`     | ✅ Done    |
+| GET    | `/events`     | ✅ Done    |
+| GET    | `/events/:id` | ⏳ Pending |
+| PUT    | `/events/:id` | ⏳ Pending |
+| DELETE | `/events/:id` | ⏳ Pending |

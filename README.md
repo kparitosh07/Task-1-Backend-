@@ -11,7 +11,7 @@ A RESTful **API** for an **Event Ticketing Platform** built using **Node.js** an
 
 ## ⚙️ Setup
 
-```bash npm install node server.js ```
+```bash npm install node index.js ```
 
 Server runs at:
 
@@ -78,6 +78,6 @@ Returns all currently created events.
 | GET    | `/`           | ✅ Done    |
 | POST   | `/events`     | ✅ Done    |
 | GET    | `/events`     | ✅ Done    |
-| GET    | `/events/:id` | ⏳ Pending |
-| PUT    | `/events/:id` | ⏳ Pending |
-| DELETE | `/events/:id` | ⏳ Pending |
+| GET    | `/events/:id` | ✅ Done    |
+| PUT    | `/events/:id` | ✅ Done    |
+| DELETE | `/events/:id` | ✅ Done    |

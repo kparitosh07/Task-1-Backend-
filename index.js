@@ -140,7 +140,23 @@ app.get("/bookings", (req, res) => {
   });
 });
 
+app.delete("/bookings/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const booking = bookings.find(booking => booking.id === id);
 
+  const event = events.find(e => e.id === booking.eventId);
+
+  if (event) {
+    event.availableTkt += booking.tickets;
+  }
+
+  bookings = bookings.filter(booking => booking.id !== id);
+
+  res.status(200).json({
+    message: "Booking cancelled successfully",
+    bookingId: id
+  });
+});
 
 
 app.listen(PORT, () => {
